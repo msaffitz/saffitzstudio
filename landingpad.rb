@@ -11,8 +11,8 @@ class LandingPad < Sinatra::Base
 
   configure do
     # Admin settings - used to access contacts
-    $admin_acct_name = 'admin'
-    $admin_acct_passwd = 'admin'
+    $admin_acct_name = ENV['ADMIN_ACCT']
+    $admin_acct_passwd = ENV['ADMIN_PASSWORD']
 
     # Page settings - used to configure your landing page
     $page_title = 'LandingPad.rb | Just add water landing pages'
